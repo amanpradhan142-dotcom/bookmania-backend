@@ -25,9 +25,8 @@ mongoose.connect(process.env.MONGO_URI, {
   console.log(err);
 });
 const rentalRoutes = require("./routes/rentalRoutes");
-const bookRoutes = require('./routes/bookRoutes');
+const bookRoutes = require('./routes/BookRoutes');
 const authRoutes = require('./routes/authRoutes');
-
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/rentals', rentalRoutes);
